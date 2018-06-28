@@ -7,4 +7,15 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'app';
+  tmpname = "vinit";
+  selectedvalue='';
+  myarr = ['a','b','c'];
+  addValues(tmpname){    
+    this.myarr.push(tmpname);
+    console.log("clicked ",this.myarr);
+  }
+  populatevalue(poplatevalue){
+    this.selectedvalue = poplatevalue;
+  }
 }
+
