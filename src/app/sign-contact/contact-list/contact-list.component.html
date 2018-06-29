@@ -1,0 +1,20 @@
+<h1>Contact List</h1><br/>
+<table border="1" cellpadding="1" cellspacing="1">
+<tr>
+  <th>Name</th>
+  <th>DOB</th>
+  <th>Phone number</th>
+</tr>
+<tr *ngFor="let item of person">
+  <td>{{item.firstname}} {{item.lastname}}</td>
+  <td>{{item.dob}}</td>
+  <td>{{item.phone}}</td>
+</tr>
+</table><br/>
+
+<h1>Add new Contact</h1><br/>
+<label>First Name</label><input id="fname" type="text" /><br />
+<label>Last Name</label><input id="lname" type="text" /><br />
+<label>DOB(Optional)</label><input id="dob" type="text" /><br />
+<label>Phone</label><input type="text" id="phone" /><br />
+<input type="button" value="Add" (click)="addFormValues($event)" />
